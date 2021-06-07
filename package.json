@@ -4,6 +4,10 @@
   "description": "Simple example of how to use GSNv2",
   "private": true,
   "dependencies": {
+    "@opengsn/cli": "^2.2.2",
+    "@opengsn/contracts": "^2.2.2",
+    "@opengsn/dev": "^2.2.2",
+    "@opengsn/provider": "^2.2.2",
     "browserify": "^17.0.0",
     "ethers": "^5.3.0",
     "ganache-cli": "^6.12.2",
@@ -13,6 +17,7 @@
   },
   "scripts": {
     "ganache": "yarn run ganache-cli -d --chainId 1337",
+    "gsn-with-ganache": "run-with-testrpc -d --chainId 1337 'gsn start'",
     "test": "run-with-testrpc 'truffle test'",
     "compile": "truffle compile",
     "start": "truffle deploy && ./ui/compile.sh && yarn serve ./html"
